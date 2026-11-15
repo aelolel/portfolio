@@ -15,16 +15,7 @@ import {
 import { Placeholder, Section } from "./Section";
 import { GithubIcon, InstagramIcon, LinkedinIcon, MailIcon, WhatsappIcon } from "./icons";
 import { CvButton } from "./Hero";
-
-function initials(name: string) {
-  return name
-    .replace(/\(.*?\)/g, "")
-    .split(/[\s,]+/)
-    .filter((w) => /^[A-Z0-9]/.test(w))
-    .slice(0, 2)
-    .map((w) => w[0])
-    .join("");
-}
+import { Logo } from "./Logo";
 
 /* ---------------- ABOUT ---------------- */
 
@@ -69,14 +60,7 @@ function Timeline({ title, items }: { title: string; items: Experience[] }) {
             <span className="absolute -left-[29.5px] top-6 h-3 w-3 rounded-full border-2 border-white bg-accent shadow" />
             <div className="glass rounded-2xl p-5">
               <div className="flex items-start gap-4">
-                {e.logo ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={e.logo} alt="" className="h-11 w-11 shrink-0 rounded-xl bg-white object-contain p-1" />
-                ) : (
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-sky to-mint font-display text-sm font-bold text-accent-deep">
-                    {initials(e.org)}
-                  </span>
-                )}
+                <Logo src={e.logo} name={e.org} />
                 <div className="min-w-0">
                   <p className="font-display text-lg font-bold leading-snug">{e.role}</p>
                   <p className="text-sm text-ink/75">{e.org}</p>
@@ -285,9 +269,7 @@ export function Education() {
         {education.map((ed) => (
           <article key={ed.school} className="glass rounded-3xl p-6 md:p-7">
             <div className="flex items-start gap-4">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-lime to-sky text-accent-deep">
-                <GraduationCap size={22} />
-              </span>
+              <Logo src={ed.logo} name={ed.school} className="h-12 w-12" fallback={<GraduationCap size={22} />} />
               <div>
                 <h3 className="font-display text-xl font-bold">{ed.school}</h3>
                 <p className="text-ink/80">{ed.degree}</p>

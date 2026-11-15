@@ -40,7 +40,7 @@ export const socials = {
   whatsappUrl: "https://wa.me/6283113555549",
   linkedin: "https://www.linkedin.com/in/sebastian-rafael-bevan/",
   instagram: "https://www.instagram.com/rafaelbevans/",
-  github: "", // TODO: e.g. "https://github.com/username"
+  github: "https://github.com/aelolel"
 };
 
 export const stats = [
@@ -111,7 +111,12 @@ export const projects: Project[] = [
     ],
     tech: ["Next.js", "Tailwind CSS", "REST API"],
     images: [], // TODO: add screenshots
-    links: [], // TODO: live site / GitHub
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/webdevtedxuniversitasairlangga2025/tedxuniversitasairlangga2025",
+      },
+    ],
   },
   {
     title: "Faculty of Pharmacy UNAIR Website Redesign",
@@ -125,7 +130,12 @@ export const projects: Project[] = [
     ],
     tech: ["Figma"], // TODO: add the stack used for slicing
     images: [],
-    links: [],
+    links: [
+      {
+        label: "Figma",
+        url: "https://www.figma.com/design/E6Brz1jt6NjkfyHo70sf62/PKL?node-id=0-1",
+      },
+    ],
   },
   {
     title: "Looker Studio Dashboard",
@@ -136,18 +146,28 @@ export const projects: Project[] = [
     points: [],
     tech: ["Looker Studio"],
     images: [],
-    links: [], // TODO: dashboard link
+    links: [
+      {
+        label: "View Dashboard",
+        url: "https://datastudio.google.com/reporting/99ed1a5c-b574-47c1-b1cd-d9d47357d44d",
+      },
+    ],
   },
   {
     title: "SmartHolt",
     tagline: "",
-    category: "Web Development",
+    category: "UI/UX",
     context: "Information Systems & Technology Innovation (ISIT) Course",
     date: "",
     points: [],
-    tech: [],
+    tech: ["Figma"],
     images: [],
-    links: [],
+    links: [
+      {
+        label: "Figma",
+        url: "https://www.figma.com/design/mXudOCyz5dvvfIDRicYCnl/Smartholt?node-id=0-1",
+      },
+    ],
   },
   {
     title: "CERDAS",
@@ -158,18 +178,23 @@ export const projects: Project[] = [
     points: [],
     tech: [],
     images: [],
-    links: [],
+    links: [{ label: "GitHub", url: "https://github.com/mferdian/CERDAS" }],
   },
   {
-    title: "TF-IDF Search",
-    tagline: "",
+    title: "Skillaby",
+    tagline: "Extracts the skills a course teaches straight from its syllabus, using TF-IDF.",
     category: "Data Analytics",
-    context: "Software Development Practicum (PPL)",
-    date: "",
+    context: "Agile Software Development Practicum (PPL)",
+    date: "2025",
     points: [],
-    tech: ["Python"],
+    tech: ["Python", "TF-IDF"],
     images: [],
-    links: [],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/AgileSoftDev-2025/course-syllabus-skill-extraction",
+      },
+    ],
   },
   {
     title: "AgriSense",
@@ -184,14 +209,18 @@ export const projects: Project[] = [
   },
   {
     title: "BodyTrackr",
-    tagline: "",
+    tagline: "A health-tracking web app for logging daily meals and workouts and reviewing progress over time.",
     category: "Web Development",
-    context: "",
-    date: "",
-    points: [],
-    tech: [],
+    context: "Web Programming Project",
+    date: "2025",
+    points: [
+      "Built daily food-intake and exercise logging, with a history view of past entries.",
+      "Implemented user registration, login and profile settings, plus a separate admin dashboard.",
+      "Designed responsive Blade views styled with Tailwind CSS and Alpine.js interactions.",
+    ],
+    tech: ["Laravel 12", "PHP", "Tailwind CSS", "Alpine.js", "Vite"],
     images: [],
-    links: [],
+    links: [{ label: "GitHub", url: "https://github.com/aelolel/BodyTrackr" }],
   },
 ];
 
@@ -212,6 +241,7 @@ export const workExperience: Experience[] = [
     role: "Web Developer Intern",
     date: "", // TODO
     location: "Surabaya, Indonesia",
+    logo: "images/logos/unair.png",
     points: [
       "Redesigned and rebuilt the faculty website, covering both UI design and front-end slicing.",
     ],
@@ -322,7 +352,7 @@ export const achievements: Achievement[] = [
     description:
       "A Get, Activate, Stay, Scale growth engine for Tempat Tumbuh, a financial-education platform: a #FirstPaycheck campaign, a self-service onboarding hub, and a B2B2C employee-wellness program.",
     team: "Team Pelari Kalcer",
-    deckUrl: "",
+    deckUrl: "https://drive.google.com/file/d/1xeCksfwIX1Zkdolr7uT7gwkm38FP3_HO/view",
     highlight: true,
   },
   {
@@ -333,17 +363,17 @@ export const achievements: Achievement[] = [
     description:
       "Consolidated 35 brand assets under one positioning and designed a user-generated 'Newsroom' distribution loop for a youth education media brand.",
     team: "Team Pelari Kalcer",
-    deckUrl: "",
+    deckUrl: "https://drive.google.com/file/d/14RI7wepp0zPwbIMXJ3y5XDAmFIvpiScO/view",
   },
   {
     rank: "Top 8",
-    event: "MCCCI",
-    date: "",
+    event: "Mini Case Competition Career Insight (MCCCI)",
+    date: "2026",
     title: "BLUE LOOP",
     description:
-      "Turned Blibli's affiliate program into a self-reinforcing growth loop.",
-    team: "",
-    deckUrl: "",
+      "Redesigned Blibli's affiliate program into a self-reinforcing growth loop, shifting who funds creator rewards instead of raising platform commissions, with an evidence-gated rollout roadmap.",
+    team: "Team Kalo Menang AC Nyala 24 Jam",
+    deckUrl: "https://drive.google.com/file/d/1IFCnUy1xwqiQMPT8JUIUcA1hTaPstiHf/view",
   },
   {
     rank: "Top 10",
@@ -353,7 +383,7 @@ export const achievements: Achievement[] = [
     description:
       "A cooperative SPV and ESCO financing scheme for a 350 kWp village solar plant anchored by a rice mill, staying bankable at 1.65× DSCR after subsidies end.",
     team: "Team Debutant",
-    deckUrl: "",
+    deckUrl: "https://drive.google.com/file/d/1VWwekcgiQxzEE5GCX8qGhqqDVrcJUxZR/view",
   },
   {
     rank: "Finalist",
@@ -433,6 +463,7 @@ export const languages = [
 export const education = [
   {
     school: "Universitas Airlangga",
+    logo: "images/logos/unair.png",
     degree: "B.S. Information Systems",
     date: "2023 – 2027",
     location: "Surabaya, Indonesia",
@@ -451,6 +482,7 @@ export const education = [
   },
   {
     school: "SMA Negeri 98 Jakarta",
+    logo: "",
     degree: "Mathematics & Natural Sciences",
     date: "2020 – 2023",
     location: "Jakarta, Indonesia",
