@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { Carousel } from "./Carousel";
 import { projects, projectCategories, type Project } from "@/data/portfolio";
 import { Placeholder } from "./Section";
 
@@ -12,7 +13,6 @@ const tints: Record<string, string> = {
 };
 
 function Cover({ p }: { p: Project }) {
-  const [i, setI] = useState(0);
   if (p.images.length === 0) {
     return (
       <div
@@ -27,47 +27,7 @@ function Cover({ p }: { p: Project }) {
       </div>
     );
   }
-  const n = p.images.length;
-  return (
-    <div className="group relative aspect-[16/9] overflow-hidden rounded-2xl border border-ink/5 bg-white">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={p.images[i]}
-        alt={`${p.title} screenshot ${i + 1}`}
-        className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-      />
-      {n > 1 && (
-        <>
-          <button
-            onClick={() => setI((i - 1 + n) % n)}
-            aria-label="Previous image"
-            className="glass absolute left-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full opacity-0 transition-opacity group-hover:opacity-100"
-          >
-            <ChevronLeft size={18} />
-          </button>
-          <button
-            onClick={() => setI((i + 1) % n)}
-            aria-label="Next image"
-            className="glass absolute right-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full opacity-0 transition-opacity group-hover:opacity-100"
-          >
-            <ChevronRight size={18} />
-          </button>
-          <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-1.5">
-            {p.images.map((_, k) => (
-              <button
-                key={k}
-                onClick={() => setI(k)}
-                aria-label={`Image ${k + 1}`}
-                className={`h-1.5 rounded-full transition-all ${
-                  k === i ? "w-5 bg-ink" : "w-1.5 bg-ink/30"
-                }`}
-              />
-            ))}
-          </div>
-        </>
-      )}
-    </div>
-  );
+  return <Carousel images={p.images} alt={`${p.title} screenshot`} />;
 }
 
 function ProjectCard({ p }: { p: Project }) {

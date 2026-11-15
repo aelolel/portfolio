@@ -16,6 +16,7 @@ import { Placeholder, Section } from "./Section";
 import { GithubIcon, InstagramIcon, LinkedinIcon, MailIcon, WhatsappIcon } from "./icons";
 import { CvButton } from "./Hero";
 import { Logo } from "./Logo";
+import { Carousel } from "./Carousel";
 
 /* ---------------- ABOUT ---------------- */
 
@@ -122,9 +123,17 @@ export function Achievements() {
             <article
               key={a.event}
               className={`glass flex flex-col rounded-3xl p-6 ${
-                big ? "md:col-span-2 lg:col-span-2 lg:row-span-2 lg:p-8" : ""
+                big ? "md:col-span-2 lg:col-span-3 lg:grid lg:grid-cols-[1.25fr_1fr] lg:gap-8 lg:p-8" : ""
               }`}
             >
+              {a.images && a.images.length > 0 && (
+                <Carousel
+                  images={a.images}
+                  alt={`${a.title} deck slide`}
+                  className={big ? "mb-5 lg:mb-0 lg:self-center" : "mb-5"}
+                />
+              )}
+              <div className="flex flex-1 flex-col">
               <div className="flex items-center justify-between gap-3">
                 <span
                   className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-display text-sm font-bold ${
@@ -178,13 +187,14 @@ export function Achievements() {
                   ))}
                 </div>
               )}
+              </div>
             </article>
           );
         })}
         {achievements.some((a) => !a.title) && (
-          <article className="glass rounded-3xl p-6">
+          <article className="glass rounded-3xl p-6 md:col-span-2 lg:col-span-3">
             <p className="font-display text-lg font-bold">Also reached</p>
-            <ul className="mt-4 space-y-3">
+            <ul className="mt-4 grid gap-3 md:grid-cols-3">
               {achievements
                 .filter((a) => !a.title)
                 .map((a) => (

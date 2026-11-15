@@ -18,7 +18,7 @@ export const profile = {
     "I build **responsive web** experiences and leverage **data analytics** to solve complex business problems.",
   bio: "Information Systems student at Universitas Airlangga who sits between the browser and the spreadsheet. I turn messy data into dashboards people actually read, and Figma designs into fast, responsive interfaces. Outside of code, I've led teams, run a small business, and placed in national business case competitions, so I care just as much about the business question as the technical answer.",
   location: "Surabaya, Indonesia",
-  photo: "images/rafael.png", // TODO: replace with a high-res transparent PNG
+  photo: "images/rafael.webp",
   cvUrl: "", // TODO: put your CV in /public (e.g. "cv-rafael.pdf") and write the file name here
   heroSkills: [
     "SQL",
@@ -110,13 +110,13 @@ export const projects: Project[] = [
       "Translated design mockups into a functional, visually consistent web interface with the design and content teams.",
     ],
     tech: ["Next.js", "Tailwind CSS", "REST API"],
-    images: [], // TODO: add screenshots
-    links: [
-      {
-        label: "GitHub",
-        url: "https://github.com/webdevtedxuniversitasairlangga2025/tedxuniversitasairlangga2025",
-      },
+    images: [
+      "images/projects/tedx-1.webp",
+      "images/projects/tedx-2.webp",
+      "images/projects/tedx-4.webp",
+      "images/projects/tedx-5.webp",
     ],
+    links: [], // repo is private
   },
   {
     title: "Faculty of Pharmacy UNAIR Website Redesign",
@@ -129,7 +129,7 @@ export const projects: Project[] = [
       "Sliced the new design into a working, responsive front end.",
     ],
     tech: ["Figma"], // TODO: add the stack used for slicing
-    images: [],
+    images: ["images/projects/figma-farmasi.webp"],
     links: [
       {
         label: "Figma",
@@ -145,7 +145,7 @@ export const projects: Project[] = [
     date: "",
     points: [],
     tech: ["Looker Studio"],
-    images: [],
+    images: ["images/projects/looker-1.webp", "images/projects/looker-2.webp"],
     links: [
       {
         label: "View Dashboard",
@@ -160,8 +160,16 @@ export const projects: Project[] = [
     context: "Information Systems & Technology Innovation (ISIT) Course",
     date: "",
     points: [],
-    tech: ["Figma"],
-    images: [],
+    tech: ["Figma", "Telegram Bot"],
+    images: [
+      "images/projects/smartholt-1.webp",
+      "images/projects/smartholt-2.webp",
+      "images/projects/smartholt-3.webp",
+      "images/projects/smartholt-4.webp",
+      "images/projects/smartholt-5.webp",
+      "images/projects/smartholt-6.webp",
+      "images/projects/smartholt-telegrambot.webp",
+    ],
     links: [
       {
         label: "Figma",
@@ -171,14 +179,19 @@ export const projects: Project[] = [
   },
   {
     title: "CERDAS",
-    tagline: "",
+    tagline:
+      "Cerita Rakyat Digital untuk Anak: a gamified web app that builds children's digital literacy through Indonesian folk tales and poems.",
     category: "Web Development",
     context: "LIDM (Lomba Inovasi Digital Mahasiswa)",
     date: "",
-    points: [],
-    tech: [],
-    images: [],
-    links: [{ label: "GitHub", url: "https://github.com/mferdian/CERDAS" }],
+    points: [
+      "Interactive reading of folk tales and poems, kept engaging with XP, levels, a timer and page locking for focus.",
+      "Story Telling mode where children read aloud to friends to build confidence and earn XP.",
+      "Progress monitoring for community reading-center (TBM) volunteers, and offline access as a Progressive Web App.",
+    ],
+    tech: ["PWA"], // TODO: add the real stack
+    images: [], // TODO: screenshots
+    links: [{ label: "Live Demo", url: "https://cerdas-silk.vercel.app" }],
   },
   {
     title: "Skillaby",
@@ -248,6 +261,7 @@ export const workExperience: Experience[] = [
   },
   {
     org: "CakapBerbicara.id",
+    logo: "images/logos/cakapberbicara.png",
     role: "Customer Relationship Management Intern",
     date: "Sep 2025 – Present",
     location: "Surabaya, Indonesia",
@@ -258,6 +272,7 @@ export const workExperience: Experience[] = [
   },
   {
     org: "TEDxUniversitasAirlangga",
+    logo: "images/logos/tedx.png",
     role: "Frontend Developer",
     date: "Jun 2025",
     location: "Surabaya, Indonesia",
@@ -268,6 +283,7 @@ export const workExperience: Experience[] = [
   },
   {
     org: "12Clean Shoe Laundry",
+    logo: "images/logos/12clean.png",
     role: "Small Business Owner",
     date: "Mar 2024 – Feb 2025",
     location: "Surabaya, Indonesia",
@@ -282,6 +298,7 @@ export const workExperience: Experience[] = [
 export const leadership: Experience[] = [
   {
     org: "Mark-Up",
+    logo: "images/logos/markup.png",
     role: "Director of People Development",
     date: "Jan 2026 – Present",
     location: "Surabaya, Indonesia",
@@ -292,6 +309,7 @@ export const leadership: Experience[] = [
   },
   {
     org: "Digistar Club by Telkom Indonesia, UNAIR Chapter",
+    logo: "images/logos/digistar.png",
     role: "Staff of Human Capital",
     date: "Nov 2025 – Present",
     location: "Surabaya, Indonesia",
@@ -301,6 +319,7 @@ export const leadership: Experience[] = [
   },
   {
     org: "HIMSI UNAIR (Information Systems Student Association)",
+    logo: "images/logos/himsi.png",
     role: "Head of Personalia Division",
     date: "Mar 2025 – Dec 2025",
     location: "Surabaya, Indonesia",
@@ -311,6 +330,7 @@ export const leadership: Experience[] = [
   },
   {
     org: "Information System Airlangga Competition (ISAC)",
+    logo: "images/logos/isac.png",
     role: "Expert Staff, Public Relations & Licensing",
     date: "May 2025",
     location: "Surabaya, Indonesia",
@@ -321,6 +341,7 @@ export const leadership: Experience[] = [
   },
   {
     org: "POINTER HIMSI UNAIR",
+    logo: "images/logos/pointer.png",
     role: "Expert Staff, Group Companion",
     date: "Jun – Sep 2025",
     location: "Surabaya, Indonesia",
@@ -340,6 +361,7 @@ export type Achievement = {
   description: string;
   team: string;
   deckUrl: string;
+  images?: string[];
   highlight?: boolean;
 };
 
@@ -353,6 +375,7 @@ export const achievements: Achievement[] = [
       "A Get, Activate, Stay, Scale growth engine for Tempat Tumbuh, a financial-education platform: a #FirstPaycheck campaign, a self-service onboarding hub, and a B2B2C employee-wellness program.",
     team: "Team Pelari Kalcer",
     deckUrl: "https://drive.google.com/file/d/1xeCksfwIX1Zkdolr7uT7gwkm38FP3_HO/view",
+    images: ["images/achievements/mbcc-1.webp", "images/achievements/mbcc-2.webp", "images/achievements/mbcc-3.webp"],
     highlight: true,
   },
   {
@@ -364,6 +387,7 @@ export const achievements: Achievement[] = [
       "Consolidated 35 brand assets under one positioning and designed a user-generated 'Newsroom' distribution loop for a youth education media brand.",
     team: "Team Pelari Kalcer",
     deckUrl: "https://drive.google.com/file/d/14RI7wepp0zPwbIMXJ3y5XDAmFIvpiScO/view",
+    images: ["images/achievements/mccdc6-1.webp", "images/achievements/mccdc6-2.webp", "images/achievements/mccdc6-3.webp"],
   },
   {
     rank: "Top 8",
@@ -374,6 +398,7 @@ export const achievements: Achievement[] = [
       "Redesigned Blibli's affiliate program into a self-reinforcing growth loop, shifting who funds creator rewards instead of raising platform commissions, with an evidence-gated rollout roadmap.",
     team: "Team Kalo Menang AC Nyala 24 Jam",
     deckUrl: "https://drive.google.com/file/d/1IFCnUy1xwqiQMPT8JUIUcA1hTaPstiHf/view",
+    images: ["images/achievements/mccci-1.webp", "images/achievements/mccci-2.webp", "images/achievements/mccci-3.webp"],
   },
   {
     rank: "Top 10",
@@ -384,6 +409,7 @@ export const achievements: Achievement[] = [
       "A cooperative SPV and ESCO financing scheme for a 350 kWp village solar plant anchored by a rice mill, staying bankable at 1.65× DSCR after subsidies end.",
     team: "Team Debutant",
     deckUrl: "https://drive.google.com/file/d/1VWwekcgiQxzEE5GCX8qGhqqDVrcJUxZR/view",
+    images: ["images/achievements/mccuiiw-1.webp", "images/achievements/mccuiiw-2.webp", "images/achievements/mccuiiw-3.webp"],
   },
   {
     rank: "Finalist",
@@ -482,7 +508,7 @@ export const education = [
   },
   {
     school: "SMA Negeri 98 Jakarta",
-    logo: "",
+    logo: "images/logos/sman98.png",
     degree: "Mathematics & Natural Sciences",
     date: "2020 – 2023",
     location: "Jakarta, Indonesia",
