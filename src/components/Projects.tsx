@@ -10,6 +10,7 @@ const tints: Record<string, string> = {
   "Web Development": "from-sky via-white to-mint",
   "Data Analytics": "from-lime via-white to-sky",
   "UI/UX": "from-mint via-white to-lime",
+  IoT: "from-sky via-white to-lime",
 };
 
 function Cover({ p }: { p: Project }) {

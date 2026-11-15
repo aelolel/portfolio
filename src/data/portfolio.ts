@@ -52,7 +52,7 @@ export const stats = [
 
 /* ---------------- PROJECTS ---------------- */
 
-export type ProjectCategory = "Web Development" | "Data Analytics" | "UI/UX";
+export type ProjectCategory = "Web Development" | "Data Analytics" | "UI/UX" | "IoT";
 
 export type Project = {
   title: string;
@@ -70,6 +70,7 @@ export const projectCategories: ProjectCategory[] = [
   "Web Development",
   "Data Analytics",
   "UI/UX",
+  "IoT",
 ];
 
 export const projects: Project[] = [
@@ -186,11 +187,16 @@ export const projects: Project[] = [
     date: "",
     points: [
       "Interactive reading of folk tales and poems, kept engaging with XP, levels, a timer and page locking for focus.",
-      "Story Telling mode where children read aloud to friends to build confidence and earn XP.",
+      "Story Maker word-arranging puzzles and a Story Telling mode where children read aloud to friends to earn XP.",
       "Progress monitoring for community reading-center (TBM) volunteers, and offline access as a Progressive Web App.",
     ],
-    tech: ["PWA"], // TODO: add the real stack
-    images: [], // TODO: screenshots
+    tech: ["Next.js", "PWA"],
+    images: [
+      "images/projects/cerdas-1.webp",
+      "images/projects/cerdas-2.webp",
+      "images/projects/cerdas-3.webp",
+      "images/projects/cerdas-4.webp",
+    ],
     links: [{ label: "Live Demo", url: "https://cerdas-silk.vercel.app" }],
   },
   {
@@ -199,9 +205,18 @@ export const projects: Project[] = [
     category: "Data Analytics",
     context: "Agile Software Development Practicum (PPL)",
     date: "2025",
-    points: [],
-    tech: ["Python", "TF-IDF"],
-    images: [],
+    points: [
+      "Users upload a syllabus (PDF or DOCX) and get back a ranked list of the skills it teaches.",
+      "Each extracted skill is shown next to the source sentence it came from, highlighted for traceability.",
+      "Results can be downloaded as a PDF, and each skill links to recommended online courses.",
+    ],
+    tech: ["Python", "TF-IDF", "NLP"],
+    images: [
+      "images/projects/skillaby-1.webp",
+      "images/projects/skillaby-2.webp",
+      "images/projects/skillaby-3.webp",
+      "images/projects/skillaby-4.webp",
+    ],
     links: [
       {
         label: "GitHub",
@@ -211,13 +226,16 @@ export const projects: Project[] = [
   },
   {
     title: "AgriSense",
-    tagline: "",
-    category: "UI/UX",
+    tagline: "An ESP32-based smart irrigation prototype that waters plants automatically based on sensor readings.",
+    category: "IoT",
     context: "IS Project Management Course",
-    date: "",
-    points: [],
-    tech: [],
-    images: [],
+    date: "2025",
+    points: [
+      "Programmed an ESP32 to read a water-level sensor and switch a relay-driven pump on and off at calibrated thresholds.",
+      "Added a cooldown timer so the pump doesn't rapidly toggle, with serial logging for monitoring and debugging.",
+    ],
+    tech: ["ESP32", "Arduino (C++)", "Sensors & Relay"],
+    images: ["images/projects/agrisense-1.webp"],
     links: [],
   },
   {
@@ -232,7 +250,7 @@ export const projects: Project[] = [
       "Designed responsive Blade views styled with Tailwind CSS and Alpine.js interactions.",
     ],
     tech: ["Laravel 12", "PHP", "Tailwind CSS", "Alpine.js", "Vite"],
-    images: [],
+    images: ["images/projects/bodytrackr-1.webp"],
     links: [{ label: "GitHub", url: "https://github.com/aelolel/BodyTrackr" }],
   },
 ];
