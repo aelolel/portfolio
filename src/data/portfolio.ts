@@ -44,7 +44,7 @@ export const socials = {
 };
 
 export const stats = [
-  { value: "3.41", suffix: "/4.00", label: "Current GPA" },
+  { value: "3.48", suffix: "/4.00", label: "Current GPA" },
   { value: "9", suffix: "", label: "Web & data projects" },
   { value: "7", suffix: "", label: "Case competitions placed" },
   { value: "573", suffix: "", label: "ELPT score (UNAIR)" },
@@ -436,7 +436,7 @@ export const education = [
     degree: "B.S. Information Systems",
     date: "2023 – 2027",
     location: "Surabaya, Indonesia",
-    detail: "GPA 3.41/4.00 (101 credits, 5 semesters)",
+    detail: "GPA 3.48/4.00 (126 credits, 6 semesters)",
     coursework: [
       "Database Systems",
       "Web Programming",
