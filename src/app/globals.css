@@ -1,26 +1,78 @@
 @import "tailwindcss";
+@import "@fontsource-variable/urbanist";
+@import "@fontsource-variable/open-sans";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-display: "Urbanist Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Open Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #141414;
+  --color-muted: #5b6070;
+  --color-accent: #3d5ec9;
+  --color-accent-deep: #2b47a8;
+  --color-lime: #e4f1b0;
+  --color-sky: #bcd0f2;
+  --color-mint: #dcf2df;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #fbfcfe;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Soft blurred color blobs, like the Figma hero */
+.blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Frosted pill / card, matching the Figma chips and navbar */
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(20, 20, 20, 0.08);
+  box-shadow: 0 6px 18px -8px rgba(30, 40, 80, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.4rem 0.95rem;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  background: linear-gradient(180deg, #ffffff 0%, #eef1f6 100%);
+  border: 1px solid rgba(20, 20, 20, 0.1);
+  box-shadow: 0 4px 10px -4px rgba(30, 40, 80, 0.3),
+    inset 0 1px 0 #fff;
+  white-space: nowrap;
+}
+
+.accent-text {
+  background: linear-gradient(100deg, #2b47a8 0%, #4e74e0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-right: 0.14em;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
 }

@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rafael — Portfolio (Next.js + Tailwind CSS)
 
-## Getting Started
-
-First, run the development server:
-
+## Run locally
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Edit content
+Almost everything lives in **one file: `src/data/portfolio.ts`**.
+Search for `TODO` to see what's still empty. Empty fields are fine — the site
+shows a "coming soon" badge or hides them.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Projects: add `points`, `tech`, `links`, and `images`
+- Images: drop files into `public/images/...` and reference them without a
+  leading slash, e.g. `"images/projects/smartholt-1.png"` (16:9 looks best)
+- Hero photo: replace `public/images/rafael.png` with a high-res transparent PNG
+- CV: put your PDF in `public/` (e.g. `cv-rafael.pdf`) and set `profile.cvUrl`
+- Org logos (optional): `logo: "images/logos/himsi.png"` on any experience entry
+- GitHub: set `socials.github`
+- Achievements: fill `date` and `deckUrl` (a Google Drive link set to "Anyone with the link")
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy to Vercel
+1. Push this folder to a GitHub repo.
+2. vercel.com → Add New Project → import the repo → Deploy (no settings needed).
