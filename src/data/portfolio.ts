@@ -121,15 +121,16 @@ export const projects: Project[] = [
   },
   {
     title: "Faculty of Pharmacy UNAIR Website Redesign",
-    tagline: "A full redesign of the faculty website, from UI design to front-end slicing.",
+    tagline: "An end-to-end revamp of the faculty website and its study program portals, from Figma prototype to Laravel front end.",
     category: "UI/UX",
     context: "Internship, Faculty of Pharmacy UNAIR",
-    date: "",
+    date: "2026",
     points: [
-      "Redesigned the faculty website's interface in Figma.",
-      "Sliced the new design into a working, responsive front end.",
+      "Revamped the main faculty website and 4 study program portals (Bachelor's, Master's and Doctoral) in a 3-person team.",
+      "Designed UI/UX wireframes and interactive prototypes in Figma to modernize the portal's look and user journey.",
+      "Built the front end from scratch with Laravel and Tailwind CSS, turning high-fidelity designs into responsive pages.",
     ],
-    tech: ["Figma"], // TODO: add the stack used for slicing
+    tech: ["Figma", "Laravel", "Tailwind CSS"],
     images: ["images/projects/figma-farmasi.webp"],
     links: [
       {
@@ -139,12 +140,16 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "Looker Studio Dashboard",
-    tagline: "",
+    title: "Student Academic Priority Dashboard",
+    tagline: "Which faculties need attention first? A Looker Studio dashboard built on university student data.",
     category: "Data Analytics",
-    context: "Bootcamp Project",
+    context: "Data Analyst Bootcamp, Satu Data UNAIR",
     date: "",
-    points: [],
+    points: [
+      "Analyzed a student dataset provided by Satu Data UNAIR as a bootcamp case study.",
+      "Compared faculties on indicators such as GPA and late graduation to identify which ones should be prioritized for intervention.",
+      "Built an interactive Looker Studio dashboard to present the comparison and the priority ranking.",
+    ],
     tech: ["Looker Studio"],
     images: ["images/projects/looker-1.webp", "images/projects/looker-2.webp"],
     links: [
@@ -156,12 +161,16 @@ export const projects: Project[] = [
   },
   {
     title: "SmartHolt",
-    tagline: "",
-    category: "UI/UX",
+    tagline: "An n8n automation integrated with a Telegram bot that helps farmers and growers manage plant care and watering.",
+    category: "Web Development",
     context: "Information Systems & Technology Innovation (ISIT) Course",
     date: "",
-    points: [],
-    tech: ["Figma", "Telegram Bot"],
+    points: [
+      "Built an automation workflow in n8n connected to a Telegram bot, so farmers can handle plant care and watering from a chat.",
+      "Aimed at making plant handling and watering more effective for farmers and home growers.",
+      "Designed the companion app interface in Figma.",
+    ],
+    tech: ["n8n", "Telegram Bot", "Figma"],
     images: [
       "images/projects/smartholt-1.webp",
       "images/projects/smartholt-2.webp",
@@ -251,7 +260,7 @@ export const projects: Project[] = [
     ],
     tech: ["Laravel 12", "PHP", "Tailwind CSS", "Alpine.js", "Vite"],
     images: ["images/projects/bodytrackr-1.webp"],
-    links: [{ label: "GitHub", url: "https://github.com/aelolel/BodyTrackr" }],
+    links: [],
   },
 ];
 
@@ -269,19 +278,20 @@ export type Experience = {
 export const workExperience: Experience[] = [
   {
     org: "Faculty of Pharmacy, Universitas Airlangga",
-    role: "Web Developer Intern",
-    date: "", // TODO
+    role: "Front-End Developer Intern",
+    date: "Jan 2026 – Apr 2026",
     location: "Surabaya, Indonesia",
     logo: "images/logos/unair.png",
     points: [
-      "Redesigned and rebuilt the faculty website, covering both UI design and front-end slicing.",
+      "Revamped the main faculty website and 4 study program portals in a 3-person team.",
+      "Designed wireframes and prototypes in Figma, then built the front end from scratch with Laravel and Tailwind CSS.",
     ],
   },
   {
     org: "CakapBerbicara.id",
     logo: "images/logos/cakapberbicara.png",
     role: "Customer Relationship Management Intern",
-    date: "Sep 2025 – Present",
+    date: "Sep 2025 – Mar 2026",
     location: "Surabaya, Indonesia",
     points: [
       "Handle client communications 2 days a week, keeping 10+ clients engaged weekly.",
@@ -291,8 +301,8 @@ export const workExperience: Experience[] = [
   {
     org: "TEDxUniversitasAirlangga",
     logo: "images/logos/tedx.png",
-    role: "Frontend Developer",
-    date: "Jun 2025",
+    role: "Front-End Developer",
+    date: "Jun 2025 – Nov 2025",
     location: "Surabaya, Indonesia",
     points: [
       "Shipped 4 key pages of the official website with Next.js, Tailwind CSS and a RESTful API.",
@@ -314,6 +324,17 @@ export const workExperience: Experience[] = [
 ];
 
 export const leadership: Experience[] = [
+  {
+    org: "BBK 7 International 2026, Universiti Teknologi Malaysia",
+    role: "Community Service Participant & Event MC",
+    date: "Dec 2025 – Feb 2026",
+    location: "Johor, Malaysia",
+    logo: "images/logos/bbk.png",
+    points: [
+      "Helped run an awareness event for Kampung Tanjung Langsat, focused on promoting the village's local cuisine.",
+      "Hosted the event as opening and closing MC.",
+    ],
+  },
   {
     org: "Mark-Up",
     logo: "images/logos/markup.png",
@@ -387,7 +408,7 @@ export const achievements: Achievement[] = [
   {
     rank: "2nd Place",
     event: "Mini Business Case Competition (MBCC) UNAIR",
-    date: "",
+    date: "2026",
     title: "The G.A.S.S. Blueprint",
     description:
       "A Get, Activate, Stay, Scale growth engine for Tempat Tumbuh, a financial-education platform: a #FirstPaycheck campaign, a self-service onboarding hub, and a B2B2C employee-wellness program.",
@@ -399,7 +420,7 @@ export const achievements: Achievement[] = [
   {
     rank: "Top 6",
     event: "Mini Case Competition, Dreamcareer × CRITENOUS",
-    date: "",
+    date: "2026",
     title: "O.N.E.: One Voice, Newsroom, Ecosystem",
     description:
       "Consolidated 35 brand assets under one positioning and designed a user-generated 'Newsroom' distribution loop for a youth education media brand.",
@@ -421,7 +442,7 @@ export const achievements: Achievement[] = [
   {
     rank: "Top 10",
     event: "Mini Case Competition, UI Innovation War",
-    date: "",
+    date: "2026",
     title: "D.E.S.A.: Decentralized Energy for Sustainable Agriculture",
     description:
       "A cooperative SPV and ESCO financing scheme for a 350 kWp village solar plant anchored by a rice mill, staying bankable at 1.65× DSCR after subsidies end.",
@@ -432,7 +453,7 @@ export const achievements: Achievement[] = [
   {
     rank: "Finalist",
     event: "BMC Muslimpreneur, Telkom University Bandung",
-    date: "",
+    date: "2025",
     title: "",
     description: "",
     team: "",
@@ -463,9 +484,9 @@ export const achievements: Achievement[] = [
 export const certifications = [
   { name: "English Language Proficiency Test (ELPT): 573", issuer: "Universitas Airlangga", url: "" },
   { name: "EF SET English Certificate: 74/100 (C2 Proficient)", issuer: "EF SET", url: "" },
-  { name: "Data Analysis with Google Looker Studio", issuer: "", url: "" },
-  { name: "Data Classification and Summarization Using IBM Granite", issuer: "IBM", url: "" },
-  { name: "Digital Analytic and Marketing Certification", issuer: "", url: "" },
+  { name: "Data Analysis with Google Looker Studio", issuer: "Ioda Academy · 2025", url: "" },
+  { name: "Data Classification and Summarization Using IBM Granite", issuer: "IBM · 2025", url: "" },
+  { name: "Digital Analytic and Marketing Certification", issuer: "RevoU · 2025", url: "" },
   { name: "NDG Linux Unhatched", issuer: "Cisco Networking Academy", url: "" },
 ];
 
@@ -509,7 +530,7 @@ export const education = [
     school: "Universitas Airlangga",
     logo: "images/logos/unair.png",
     degree: "B.S. Information Systems",
-    date: "2023 – 2027",
+    date: "Aug 2023 – Jul 2027 (expected)",
     location: "Surabaya, Indonesia",
     detail: "GPA 3.48/4.00 (126 credits, 6 semesters)",
     coursework: [
