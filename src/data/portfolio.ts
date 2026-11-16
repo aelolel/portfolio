@@ -150,7 +150,7 @@ export const projects: Project[] = [
       "Compared faculties on indicators such as GPA and late graduation to identify which ones should be prioritized for intervention.",
       "Built an interactive Looker Studio dashboard to present the comparison and the priority ranking.",
     ],
-    tech: ["Looker Studio"],
+    tech: ["Looker Studio", "Google Sheets"],
     images: ["images/projects/looker-1.webp", "images/projects/looker-2.webp"],
     links: [
       {
@@ -199,7 +199,7 @@ export const projects: Project[] = [
       "Story Maker word-arranging puzzles and a Story Telling mode where children read aloud to friends to earn XP.",
       "Progress monitoring for community reading-center (TBM) volunteers, and offline access as a Progressive Web App.",
     ],
-    tech: ["Next.js", "PWA"],
+    tech: ["Next.js", "Supabase", "PWA"],
     images: [
       "images/projects/cerdas-1.webp",
       "images/projects/cerdas-2.webp",
@@ -258,7 +258,7 @@ export const projects: Project[] = [
       "Implemented user registration, login and profile settings, plus a separate admin dashboard.",
       "Designed responsive Blade views styled with Tailwind CSS and Alpine.js interactions.",
     ],
-    tech: ["Laravel 12", "PHP", "Tailwind CSS", "Alpine.js", "Vite"],
+    tech: ["Laravel 12", "PHP", "Firebase", "Tailwind CSS", "Alpine.js", "Vite"],
     images: ["images/projects/bodytrackr-1.webp"],
     links: [],
   },
