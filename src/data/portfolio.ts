@@ -19,7 +19,7 @@ export const profile = {
   bio: "Information Systems student at Universitas Airlangga who sits between the browser and the spreadsheet. I turn messy data into dashboards people actually read, and Figma designs into fast, responsive interfaces. Outside of code, I've led teams, run a small business, and placed in national business case competitions, so I care just as much about the business question as the technical answer.",
   location: "Surabaya, Indonesia",
   photo: "images/rafael.webp",
-  cvUrl: "", // TODO: put your CV in /public (e.g. "cv-rafael.pdf") and write the file name here
+  cvUrl: "CV_Sebastian_Rafael_Bevan_Setyawan.pdf",
   heroSkills: [
     "SQL",
     "Looker",
