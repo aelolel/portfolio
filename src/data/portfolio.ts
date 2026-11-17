@@ -89,7 +89,11 @@ export const projects: Project[] = [
       "Wrote every chart title as the insight rather than a label, and noted the limitation that EIA spot prices are used as a proxy for the MOPS/ICP benchmarks used in Indonesia.",
     ],
     tech: ["Python", "Pandas", "Excel", "Power BI"],
-    images: ["images/projects/oil-1.webp", "images/projects/oil-2.webp"],
+    images: [
+      "images/projects/oil-1.webp",
+      "images/projects/oil-2.webp",
+      "images/projects/oil-demo.mp4",
+    ],
     links: [
       {
         label: "Full Project",
