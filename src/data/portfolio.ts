@@ -83,6 +83,7 @@ export const projects: Project[] = [
     context: "Personal Mini Project",
     date: "2026",
     points: [
+      "Business questions: where crude prices are heading, how wide the Brent–WTI spread is, whether refining margins are above normal, and which product earns the most per barrel.",
       "Built a Python pipeline that turns 93 months of EIA spot prices into crack spreads, the Brent–WTI spread and 5-year averages.",
       "Crude Market Review: Brent hit $114.2/bbl in Sep 2026, with the Brent–WTI spread at 3.5x its historical average.",
       "Refining Margin Monitor: the 3-2-1 crack is 80.9% above its 5-year norm, and diesel earns 3.1x more than gasoline.",
