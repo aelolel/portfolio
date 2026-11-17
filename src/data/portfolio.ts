@@ -78,16 +78,14 @@ export const projects: Project[] = [
   {
     title: "Oil & Products Pricing Monitor",
     tagline:
-      "A two-page Power BI dashboard that tracks crude benchmarks and refining margins from 2019 to 2026, built on U.S. EIA spot price data.",
+      "A two-page Power BI dashboard tracking crude prices and refining margins (2019–2026) from U.S. EIA data.",
     category: "Data Analytics",
     context: "Personal Mini Project",
     date: "2026",
     points: [
-      "Business questions: where crude prices are heading, how wide the Brent–WTI spread is, whether refining margins are above normal, and which product (gasoline, diesel or jet) earns the most per barrel.",
-      "Built a Python (Pandas) pipeline that cleans 93 months of EIA spot prices (Jan 2019 – Sep 2026), converts products from USD/gal to USD/bbl, and calculates crack spreads, the 3-2-1 crack, the Brent–WTI spread and a 5-year rolling average, then exports a modeled Excel workbook.",
-      "Page 1 (Crude Market Review): KPI cards plus benchmark, spread and crude-vs-margin charts, showing Brent at $114.2/bbl in Sep 2026, a Brent–WTI spread 3.5x its historical average, and a 0.74 correlation between crude rallies and refining margins.",
-      "Page 2 (Refining Margin Monitor): the 3-2-1 crack sits at $51.4/bbl, 80.9% above its 5-year norm. Diesel leads at $94.0/bbl, 3.1x gasoline, and a monthly seasonality heatmap shows Dec–Feb as the low-margin window for refinery turnarounds.",
-      "Wrote every chart title as the insight rather than a label, and noted the limitation that EIA spot prices are used as a proxy for the MOPS/ICP benchmarks used in Indonesia.",
+      "Built a Python pipeline that turns 93 months of EIA spot prices into crack spreads, the Brent–WTI spread and 5-year averages.",
+      "Crude Market Review: Brent hit $114.2/bbl in Sep 2026, with the Brent–WTI spread at 3.5x its historical average.",
+      "Refining Margin Monitor: the 3-2-1 crack is 80.9% above its 5-year norm, and diesel earns 3.1x more than gasoline.",
     ],
     tech: ["Python", "Pandas", "Excel", "Power BI"],
     images: [
