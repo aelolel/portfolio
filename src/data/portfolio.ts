@@ -22,6 +22,7 @@ export const profile = {
   cvUrl: "CV_Sebastian_Rafael_Bevan_Setyawan.pdf",
   heroSkills: [
     "SQL",
+    "Power BI",
     "Looker",
     "Tableau",
     "Excel",
