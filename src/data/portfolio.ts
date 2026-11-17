@@ -45,7 +45,7 @@ export const socials = {
 
 export const stats = [
   { value: "3.48", suffix: "/4.00", label: "Current GPA" },
-  { value: "9", suffix: "", label: "Web & data projects" },
+  { value: "10", suffix: "", label: "Web & data projects" },
   { value: "7", suffix: "", label: "Case competitions placed" },
   { value: "573", suffix: "", label: "ELPT score (UNAIR)" },
 ];
@@ -74,6 +74,33 @@ export const projectCategories: ProjectCategory[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    title: "Oil & Products Pricing Monitor",
+    tagline:
+      "A two-page Power BI dashboard that tracks crude benchmarks and refining margins from 2019 to 2026, built on U.S. EIA spot price data.",
+    category: "Data Analytics",
+    context: "Personal Mini Project",
+    date: "2026",
+    points: [
+      "Business questions: where crude prices are heading, how wide the Brent–WTI spread is, whether refining margins are above normal, and which product (gasoline, diesel or jet) earns the most per barrel.",
+      "Built a Python (Pandas) pipeline that cleans 93 months of EIA spot prices (Jan 2019 – Sep 2026), converts products from USD/gal to USD/bbl, and calculates crack spreads, the 3-2-1 crack, the Brent–WTI spread and a 5-year rolling average, then exports a modeled Excel workbook.",
+      "Page 1 (Crude Market Review): KPI cards plus benchmark, spread and crude-vs-margin charts, showing Brent at $114.2/bbl in Sep 2026, a Brent–WTI spread 3.5x its historical average, and a 0.74 correlation between crude rallies and refining margins.",
+      "Page 2 (Refining Margin Monitor): the 3-2-1 crack sits at $51.4/bbl, 80.9% above its 5-year norm. Diesel leads at $94.0/bbl, 3.1x gasoline, and a monthly seasonality heatmap shows Dec–Feb as the low-margin window for refinery turnarounds.",
+      "Wrote every chart title as the insight rather than a label, and noted the limitation that EIA spot prices are used as a proxy for the MOPS/ICP benchmarks used in Indonesia.",
+    ],
+    tech: ["Python", "Pandas", "Excel", "Power BI"],
+    images: ["images/projects/oil-1.webp", "images/projects/oil-2.webp"],
+    links: [
+      {
+        label: "Full Project",
+        url: "https://drive.google.com/drive/folders/1EbcWEg7IwzJSbne_AzbahuGv8J8iicsn?usp=sharing",
+      },
+      {
+        label: "Data Source (EIA)",
+        url: "https://www.eia.gov/petroleum/prices/table.php?show_by=12_series&period=M&table_key=PET_PRI_SPT_S1_M",
+      },
+    ],
+  },
   {
     title: "KAI Access Sentiment Analysis",
     tagline:
@@ -495,7 +522,7 @@ export const certifications = [
 export const skillGroups = [
   {
     title: "Data Analytics",
-    items: ["Python", "SQL", "Tableau", "Looker Studio", "Excel", "Google Sheets"],
+    items: ["Python", "SQL", "Power BI", "Tableau", "Looker Studio", "Excel", "Google Sheets"],
   },
   {
     title: "Web Development",
